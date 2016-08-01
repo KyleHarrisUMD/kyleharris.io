@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<!DOCTYPE html> 
+<html>
+<head>
+<!-- Adding CDN for bootstrap  --> 
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<!-- Custom CSS in static files -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css'%}">
+<title> Django Blog </title> 
+</head>
+
+<body>
+ <a href="{% url 'post_new' %}"> Create a new post </a>
+ {% block content %}
+ {% endblock %}
+</body>
+</html>
